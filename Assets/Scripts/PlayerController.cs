@@ -4,9 +4,15 @@ using UnityEngine.InputSystem;
 public class PlayerController : MonoBehaviour
 {
     private Rigidbody playerRb;
+
     public InputAction jumpAction;
+    public InputAction fireAction;
+
+    public GameObject bulletPrefab;
+
     public float gravityModifier = 10.0f;
     public float jumpForce = 23.4f;
+
     public bool isOnGround = true;
     public bool gameOver = false;
 
@@ -16,6 +22,8 @@ public class PlayerController : MonoBehaviour
         playerRb = GetComponent<Rigidbody>();
 
         jumpAction.Enable();
+        fireAction.Enable();
+
         Physics.gravity *= gravityModifier;
     }
 
@@ -26,6 +34,11 @@ public class PlayerController : MonoBehaviour
         {
             playerRb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
             isOnGround = false;
+        }
+
+        if (fireAction.triggered)
+        {
+            Instantiate(bulletPrefab, transform.position, bulletPrefab.transform.rotation);
         }
     }
 
@@ -41,5 +54,7 @@ public class PlayerController : MonoBehaviour
             Debug.Log("Game Over!");
 
         }
+
+
     }
 }

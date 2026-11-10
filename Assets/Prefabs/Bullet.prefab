@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6317943181488515680}
   - component: {fileID: 4527411928787762881}
   - component: {fileID: 5686002266491462968}
+  - component: {fileID: -1015578818132383551}
   m_Layer: 0
   m_Name: Bullet
   m_TagString: Bullet
@@ -112,3 +113,16 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &-1015578818132383551
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4669747511164780459}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28b89a0a179ef224d9f36dae41e15adc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MoveForward
+  speed: 30

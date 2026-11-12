@@ -148,7 +148,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e64834e6626af6488afca20758dbc38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpawnManager
-  obstaclePrefab: {fileID: 4212803636960220671, guid: 6614146907bd9794db809196c38ff865, type: 3}
+  obstaclePrefab:
+  - {fileID: 4212803636960220671, guid: 6614146907bd9794db809196c38ff865, type: 3}
+  - {fileID: 8439530264566936689, guid: da5f86421ecfb3c41a73a4fcbdb628c5, type: 3}
 --- !u!4 &14768042
 Transform:
   m_ObjectHideFlags: 0
@@ -201,7 +203,7 @@ SphereCollider:
     m_Bits: 0
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
-  m_ProvidesContacts: 0
+  m_ProvidesContacts: 1
   m_Enabled: 1
   serializedVersion: 3
   m_Radius: 0.51564264
@@ -335,6 +337,25 @@ MonoBehaviour:
       m_Flags: 0
     m_Flags: 0
     m_Priority: 0
+  fireAction:
+    m_Name: Fire
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: dc771c6e-e43a-4eb8-8e33-8a78e8a2f793
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 0e3f8ee7-1d2c-49b7-a8d4-c1984d86d03c
+      m_Path: <Mouse>/leftButton
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Fire
+      m_Flags: 0
+    m_Flags: 0
+    m_Priority: 0
+  bulletPrefab: {fileID: 4669747511164780459, guid: e5fdb26eeb891b14b9a7a62b1a0ddacf, type: 3}
   gravityModifier: 10
   jumpForce: 25
   isOnGround: 1

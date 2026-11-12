@@ -30,13 +30,13 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (jumpAction.triggered && isOnGround)
+        if (jumpAction.triggered && isOnGround && !gameOver)
         {
             playerRb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
             isOnGround = false;
         }
 
-        if (fireAction.triggered)
+        if (fireAction.triggered && !gameOver)
         {
             Instantiate(bulletPrefab, transform.position, bulletPrefab.transform.rotation);
         }
